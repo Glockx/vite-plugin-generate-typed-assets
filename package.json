@@ -28,7 +28,7 @@
   },
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
-    "publish": "npm run build && npm publish"
+    "push": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
