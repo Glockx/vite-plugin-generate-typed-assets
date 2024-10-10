@@ -11,7 +11,7 @@ export interface GenerateAssetsPluginOptions {
   assetExtensions?: string[];
 }
 
-export default function generateAssetsPlugin(
+export function generateAssetsPlugin(
   options: GenerateAssetsPluginOptions
 ): Plugin {
   const {
