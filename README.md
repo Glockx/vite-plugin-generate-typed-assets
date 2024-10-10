@@ -1,7 +1,7 @@
 # Vite Plugin: Generate Assets
 
 [![npm version](https://img.shields.io/npm/v/vite-plugin-generate-typed-assets.svg)](https://www.npmjs.com/package/vite-plugin-generate-typed-assets)
-[![license](https://img.shields.io/npm/l/vite-plugin-generate-typed-assets.svg)](https://github.com/glockx/vite-plugin-generate-typed-assets/blob/main/LICENSE)
+[![license](https://img.shields.io/npm/l/vite-plugin-generate-typed-assets.svg)](https://github.com/Glockx/vite-plugin-generate-typed-assets/blob/main/LICENSE)
 
 A Vite plugin that automatically generates TypeScript asset index files (`index.ts` and `index.d.ts`) for your assets directory, complete with type definitions. It watches for changes in your assets folder and updates the index files accordingly, providing a seamless way to manage and import your assets with full type safety and autocomplete support.
 
