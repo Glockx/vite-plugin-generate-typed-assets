@@ -68,7 +68,7 @@ npm install vite-plugin-generate-typed-assets --save-dev
    });
    ```
 
-2. Add given settings to <code>tsconfig.app.json</code>:
+2. Add given settings to <code>tsconfig.app.json</code> file:
    ```typescript
     "baseUrl": "./",
     "paths": {
