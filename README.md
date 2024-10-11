@@ -34,39 +34,47 @@ npm install vite-plugin-generate-typed-assets --save-dev
 
 ## Usage
 
-Add the plugin to your <code>vite.config.ts</code> file:
+1. Add the plugin to your <code>vite.config.ts</code> file:
 
-```typescript
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import generateAssetsPlugin from "vite-plugin-generate-typed-assets";
-import path from "path";
+   ```typescript
+   import { defineConfig } from "vite";
+   import react from "@vitejs/plugin-react-swc";
+   import generateAssetsPlugin from "vite-plugin-generate-typed-assets";
+   import path from "path";
 
-export default defineConfig({
-  plugins: [
-    react(),
-    generateAssetsPlugin({
-      assetsDir: path.resolve(__dirname, "src/assets"),
-      outputFile: path.resolve(__dirname, "src/assets/index.ts"),
-      assetExtensions: [
-        ".png",
-        ".jpg",
-        ".jpeg",
-        ".svg",
-        ".gif",
-        ".webp",
-        ".mp3",
-        ".json",
-      ],
-    }),
-  ],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "src"),
+   export default defineConfig({
+     plugins: [
+       react(),
+       generateAssetsPlugin({
+         assetsDir: path.resolve(__dirname, "src/assets"),
+         outputFile: path.resolve(__dirname, "src/assets/index.ts"),
+         assetExtensions: [
+           ".png",
+           ".jpg",
+           ".jpeg",
+           ".svg",
+           ".gif",
+           ".webp",
+           ".mp3",
+           ".json",
+         ],
+       }),
+     ],
+     resolve: {
+       alias: {
+         "@": path.resolve(__dirname, "src"),
+       },
+     },
+   });
+   ```
+
+2. Add given settings to <code>tsconfig.app.json</code>:
+   ```typescript
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
     },
-  },
-});
-```
+   ```
 
 ## Options
 
